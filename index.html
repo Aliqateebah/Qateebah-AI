@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قتيبةAI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            width: 250px;
+            background: #333;
+            color: #fff;
+            height: 100%;
+            transition: left 0.3s;
+            padding: 15px;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .content {
+            margin-left: 20px;
+            padding: 20px;
+        }
+        .social-buttons {
+            position: fixed;
+            right: 20px;
+            top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .social-button {
+            background: #007bff;
+            border: none;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>قتيبةAI</h1>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰ قائمة</button>
+</header>
+
+<div class="sidebar" id="sidebar">
+    <h2>الصفحات</h2>
+    <ul>
+        <li><a href="#page1" style="color: white;">صفحة 1</a></li>
+        <li><a href="#page2" style="color: white;">صفحة 2</a></li>
+        <li><a href="#page3" style="color: white;">صفحة 3</a></li>
+    </ul>
+</div>
+
+<div class="content">
+    <h2>تحويل النص إلى صوت</h2>
+    <textarea id="text-input" rows="5" cols="50" placeholder="اكتب النص هنا..."></textarea><br>
+    <button onclick="readText()">قراءة النص</button>
+    <button onclick="shareAudio()">مشاركة المقطع الصوتي</button>
+    <button onclick="saveAudio()">حفظ المقطع الصوتي</button>
+</div>
+
+<div class="social-buttons">
+    <a href="https://wa.me/967781208883" class="social-button">📞</a>
+    <a href="https://www.facebook.com/profile.php?id=100012638317625&mibextid=LQQJ4d" class="social-button">📘</a>
+    <a href="https://www.tiktok.com/@aliqateeabah?_t=8rJwVPfWBqT&_r=1" class="social-button">🎶</a>
+    <a href="mailto:qateebah1992@gmail.com" class="social-button">✉️</a>
+</div>
+
+<footer>
+    جميع الحقوق محفوظة لموقع قتيبةAI
+</footer>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    function readText() {
+        const text = document.getElementById('text-input').value;
+        // هنا يمكنك إضافة الكود الخاص بتحويل النص إلى صوت
+        alert("قراءة النص: " + text);
+    }
+
+    function shareAudio() {
+        // هنا يمكنك إضافة الكود الخاص بمشاركة المقطع الصوتي
+        alert("مشاركة المقطع الصوتي.");
+    }
+
+    function saveAudio() {
+        // هنا يمكنك إضافة الكود الخاص بحفظ المقطع الصوتي
+        alert("حفظ المقطع الصوتي.");
+    }
+</script>
+
+</body>
+</html>
